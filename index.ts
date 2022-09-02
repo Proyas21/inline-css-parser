@@ -9,7 +9,7 @@ export default function getStyle(css: string) {
     });
     json = json.slice(0, -2) + "\n}";
 
-    return json;
+    return JSON.parse(json);
 }
 
 function getValue(token: string) {

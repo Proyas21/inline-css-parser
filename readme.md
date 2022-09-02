@@ -5,7 +5,7 @@
 ## Example:
 
 ```
-const inlineCss = `"fill":"#ffffff","fillOpacity":"1","fillRule":"evenodd","stroke":"#000000","strokeWidth":"0.5","strokeMiterlimit":"4","strokeDasharray":"none"`;
+const inlineCss = "fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none";
 ```
 
 ```
