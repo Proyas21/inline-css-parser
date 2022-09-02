@@ -13,6 +13,9 @@
     "inline css",
     "web"
   ],
+  "publishConfig": {
+    "@proyas21:registry": "https://npm.pkg.github.com"
+  },
   "author": "github.com/Proyas21",
   "license": "MIT",
   "devDependencies": {
