@@ -10,7 +10,7 @@ function getStyle(css) {
         json += slice;
     });
     json = json.slice(0, -2) + "\n}";
-    return json;
+    return JSON.parse(json);
 }
 exports["default"] = getStyle;
 function getValue(token) {
