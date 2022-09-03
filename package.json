@@ -7,16 +7,19 @@
     "dev": "nodemon index.ts",
     "build": "tsc index.ts"
   },
+  "publishConfig": {
+    "@proyas21:registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "css",
     "react",
     "inline css",
     "web"
   ],
-  "publishConfig": {
-    "@proyas21:registry": "https://npm.pkg.github.com"
-  },
   "author": "github.com/Proyas21",
+  "repository": {
+    "url": "https://github.com/Proyas21/inline-css-parser.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "ts-node": "^10.9.1",
