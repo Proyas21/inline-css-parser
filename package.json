@@ -1,6 +1,6 @@
 {
-  "name": "inline-css-string",
-  "version": "1.0.0",
+  "name": "inline-css-parser",
+  "version": "0.1.0",
   "description": "Convert inline css string to react style object",
   "main": "index.js",
   "scripts": {
