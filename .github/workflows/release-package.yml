@@ -4,10 +4,6 @@ on:
   release:
     types: [created]
   workflow_dispatch:
-    tags:
-      description: "Manual trigger"
-      required: false
-      type: boolean
 
 jobs:
   build:
