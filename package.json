@@ -1,5 +1,5 @@
 {
-  "name": "inline-css-parser",
+  "name": "@proyas21/inline-css-parser",
   "version": "0.2.0",
   "description": "Convert inline css string to react style object",
   "main": "index.js",
