@@ -4,17 +4,18 @@ function getStyle(css) {
     var tokens = css.split(";");
     var json = "{\n";
     tokens.forEach(function (token) {
-        var slice = "";
-        var value = getValue(token);
-        slice += "\"".concat(camelCase(getProperty(token)), "\" : ").concat(!isNaN(value) ? value : "\"" + value + "\"", ",\n");
-        json += slice;
+        var value = getValue(token).trim();
+        var property = getProperty(token).trim();
+        if (!(value.length > 0) || !(property.length > 0))
+            return;
+        json += "\"".concat(camelCase(property), "\" : ").concat(!isNaN(value) ? value : "\"" + value + "\"", ",\n");
     });
     json = json.slice(0, -2) + "\n}";
     return JSON.parse(json);
 }
 exports["default"] = getStyle;
 function getValue(token) {
-    return token.split(":").pop();
+    return token.split(":").pop() || "";
 }
 function getProperty(token) {
     var res = token.split(":");

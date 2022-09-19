@@ -2,10 +2,11 @@ export default function getStyle(css: string) {
     const tokens = css.split(";");
     let json = "{\n";
     tokens.forEach(token => {
-        let slice = "";
-        const value = getValue(token)
-        slice += `"${camelCase(getProperty(token))}" : ${!isNaN(value as unknown as number) ? value : "\"" + value + "\""},\n`;
-        json += slice;
+        const value = getValue(token).trim();
+        const property = getProperty(token).trim();
+        if (!(value.length > 0) || !(property.length > 0)) return;
+
+        json += `"${camelCase(property)}" : ${!isNaN(value as unknown as number) ? value : "\"" + value + "\""},\n`;
     });
     json = json.slice(0, -2) + "\n}";
 
@@ -13,7 +14,7 @@ export default function getStyle(css: string) {
 }
 
 function getValue(token: string) {
-    return token.split(":").pop();
+    return token.split(":").pop() || "";
 }
 function getProperty(token: string) {
     let res = token.split(":");
