@@ -7,9 +7,6 @@
     "dev": "nodemon index.ts",
     "build": "tsc index.ts"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@proyas21"
-  },
   "keywords": [
     "css",
     "react",
