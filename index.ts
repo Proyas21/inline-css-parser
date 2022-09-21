@@ -1,4 +1,6 @@
-export default function getStyle(css: string) {
+export default function getStyle(...cssArr: Array<string>) {
+
+    let css: string = cssArr.join("")
     const tokens = css.split(";");
     let json = "{\n";
     tokens.forEach(token => {

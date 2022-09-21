@@ -1,6 +1,11 @@
 "use strict";
 exports.__esModule = true;
-function getStyle(css) {
+function getStyle() {
+    var cssArr = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        cssArr[_i] = arguments[_i];
+    }
+    var css = cssArr.join("");
     var tokens = css.split(";");
     var json = "{\n";
     tokens.forEach(function (token) {
